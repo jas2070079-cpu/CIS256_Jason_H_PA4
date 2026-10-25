@@ -69,8 +69,11 @@ if __name__ == "__main__":
         for index in letter_positions:
             working_word[index] = letter_guess
 
+        if letter_positions == []:
+                    print("Letter not found")
+
         for letter in working_word:
-            print(letter, end=" ")
+            print(letter, end=" ")    
 
         if "_" not in working_word:
             word_found = True
