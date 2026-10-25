@@ -18,6 +18,13 @@ def find_letter_indexes(letter_input, word):
 
     return letter_positions
 
+# Function selects random word from word_list.
+def select_random_word(word_list):
+    random_number = random.randint(0, len(word_list) - 1)
+    random_word = word_list[random_number]
+
+    return random_word
+
 # MAIN
 
 # Create word list for guessing game
@@ -36,8 +43,7 @@ word_list =[
 
 if __name__ == "__main__":
     # Determine random word from word_list
-    random_number = random.randint(0, len(word_list) - 1)
-    random_word = word_list[random_number]
+    random_word = select_random_word(word_list)
 
     # Starts game. Prints blank word to terminal.
     print("\nWelcome to Guess The Word!")
